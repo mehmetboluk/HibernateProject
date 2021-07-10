@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd ">
+
+
+	<!-- bu tag @Autowired @PostConstruct @PreDestroy @Resource gibi annotationlarin kullanilmasini saglar.
+	aktif eder.
+	 -->
+	<context:annotation-config />
+
+	<bean id="employee" class="autowire_model.Employee">
+		<property name="name" value="Levent" />
+		<property name="surname" value="Erguder"></property>
+	</bean>
+
+	<bean id="address" class="autowire_model.Address">
+		<property name="city" value="Ankara" />
+		<property name="country" value="Turkey" />
+	</bean>
+	
+	<bean id="address1" class="autowire_model.Address">
+		<property name="city" value="Istanbul" />
+		<property name="country" value="Turkey" />
+	</bean>
+
+
+</beans>
